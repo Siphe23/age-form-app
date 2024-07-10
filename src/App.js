@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
+import Logo from "./images/icon-arrow.svg";
+import './app.css';
 
 function App() {
   const [day, setDay] = useState('');
@@ -52,7 +53,7 @@ function App() {
       const ageDate = new Date(ageDiffMill);
       const ageYears = ageDate.getUTCFullYear() - 1970;
       const ageMonths = ageDate.getUTCMonth();
-      const ageDays = ageDate.getUTCDate() - 1; // Adjust for date start from 0
+      const ageDays = ageDate.getUTCDate() - 1; 
 
       setOutputYear(ageYears);
       setOutputMonth(ageMonths);
@@ -67,27 +68,27 @@ function App() {
       <div className="input-flex">
         <div className="input-container">
           <span>Day</span>
-          <input type="number" id="day" value={day} onChange={handleInputChange} />
+          <input type="text" id="day" value={day} onChange={handleInputChange} />
           <small className="error-day"></small>
         </div>
         <div className="input-container">
           <span>Month</span>
-          <input type="number" id="month" value={month} onChange={handleInputChange} />
+          <input type="text" id="month" value={month} onChange={handleInputChange} />
           <small className="error-month"></small>
         </div>
         <div className="input-container">
           <span>Year</span>
-          <input type="number" id="year" value={year} onChange={handleInputChange} />
+          <input type="text" id="year" value={year} onChange={handleInputChange} />
           <small className="error-year"></small>
         </div>
       </div>
       <button className="submit-btn" onClick={calculateDate}>
-        <img src="./assets/images/icon-arrow.svg" alt="" />
+        <img src={Logo} alt="logo" />
       </button>
       <div className="output">
-        <h1><span className="output-year">{outputYear}</span>years</h1>
-        <h1><span className="output-month">{outputMonth}</span>months</h1>
-        <h1><span className="output-day">{outputDay}</span>days</h1>
+        <h1><span className="output-year">{outputYear}</span> years</h1>
+        <h1><span className="output-month">{outputMonth}</span> months</h1>
+        <h1><span className="output-day">{outputDay}</span> days</h1>
       </div>
     </div>
   );
