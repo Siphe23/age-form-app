@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Logo from "./images/icon-arrow.svg";
-import './app.css';
+import './App.css';
 
 function App() {
   const [day, setDay] = useState('');
