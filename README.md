@@ -15,8 +15,11 @@ This project is a solution to a Frontend Mentor challenge, built using React. It
 
 The **Age Calculator App** is a small application where users can enter their birth date and calculate their age based on the current date. It validates inputs for day, month, and year to ensure valid dates. If the inputs are valid, it displays the calculated age; otherwise, it shows an error message.
 
-## Site
+## run
  http://localhost:3000  
+
+ ## Site 
+ https://age-form-app.vercel.app/
  
 ## Screen shots
 ![Preview](./src/images/age.png)
